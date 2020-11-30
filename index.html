@@ -75,12 +75,24 @@
 									<h5>Key-Value inserting with Hash Function:</h5>
 									<ol>
 										<li>Each key from a key-value pairs is being converted into a hash code.</li>
-										<li>Calculating modulo: <code>hash(key) MOD hash_table_size</code><li>
+										<li>Calculating modulo: <code>hash(key) MOD hash_table_size</code></li>
 										<li>The outcome of modulo gives a hash_table index where value can be inserted.</li>
 										<li>In case when the received hash_table index is already occupied by another value, then we have a collision.</li>
 										<li>In other words, collsion appears when hash function and further modulo generates the same index for more than one key.</li>
 										<li>When we have a collision, then we need to proceed with additional computation with e.g. <b>double hashing</b></li>
 									</ol>
+
+									<h5>Key-Value insertion example:</h5>
+									<img src="images/hash_function.png" width="600">
+									<small style="font-size:10px;">source: wikipedia</small>
+									<ul>
+										<li>In example we can see key-value pairs: name-phone.</li>
+										<li>Each person's name goes through a hash function which places that person's phone number into a specific slot of the hash table.</li>
+										<li>Hash function outputs a hash table index where a value for the computed key is being stored.</li>
+										<li><i>Important to notice is the fact that hash function output, which is a final hash table's index, depends on the key directly.</i> In other words, characters sequence of 'John' gives totally different index than characters sequence of 'Johnny'.</li>
+									</ul>
+
+
 
 								</div>
 							</section>
