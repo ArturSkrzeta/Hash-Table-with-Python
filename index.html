@@ -62,7 +62,7 @@
 									<h3>Features</h3>
 									<p>App includes following features:</p>
 									<ul class="feature-icons">
-										<li class="icon solid fa-check">Numpy</li>
+										<li class="icon solid fa-check">OOP</li>
 									</ul>
 								</div>
 							</section>
@@ -72,10 +72,15 @@
 								<div class="container">
 									<h3>Demo</h3>
 
-									<h5>...:</h5>
-									<ul>
-										<li>...</li>
-									</ul>
+									<h5>Key-Value inserting with Hash Function:</h5>
+									<ol>
+										<li>Each key from a key-value pairs is being converted into a hash code.</li>
+										<li>Calculating modulo: <code>hash(key) MOD hash_table_size</code><li>
+										<li>The outcome of modulo gives a hash_table index where value can be inserted.</li>
+										<li>In case when the received hash_table index is already occupied by another value, then we have a collision.</li>
+										<li>In other words, collsion appears when hash function and further modulo generates the same index for more than one key.</li>
+										<li>When we have a collision, then we need to proceed with additional computation with e.g. <b>double hashing</b></li>
+									</ol>
 
 								</div>
 							</section>
