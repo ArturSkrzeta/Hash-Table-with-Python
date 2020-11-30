@@ -73,14 +73,25 @@
 								<div class="container">
 									<h3>Demo</h3>
 
+									<p>Main goal of keeping hash table is distributing and retrieving entries (key-value pairs) across an array slots efficiently.</p>
+
 									<h5>Key-Value inserting with Hash Function:</h5>
 									<ol>
-										<li>Each key from a key-value pairs is being converted into a hash code.</li>
-										<li>Calculating modulo: <code>hash(key) MOD hash_table_size</code></li>
+										<li>Each key from a key-value pairs is being converted into a hash code.
+											<br>
+											<code> hash = hash_function(key)</code><br>&nbsp&nbsp
+											note that hash being calculated based on a key is independent of the array size.
+										</li>
+										<li>Calculating modulo which gives rest of division:
+											<br>
+											<code>modulo operator: %</code><br>
+											<code>index = hash % hash_table_size</code><br>&nbsp&nbsp
+											modulo reduces hash to an index = number between 0 and hash_table_size - 1 inclusively.
+										</li>
 										<li>The outcome of modulo gives a hash_table index where value can be inserted.</li>
-										<li>In case when the received hash_table index is already occupied by another value, then we have a collision.</li>
-										<li>In other words, collsion appears when hash function and further modulo generates the same index for more than one key.</li>
-										<li>When we have a collision, then we need to proceed with additional computation with e.g. <b>double hashing</b></li>
+										<li>In case when the received hash table index is already occupied by another value, then we have a collision.
+												In other words, collsion appears when hash function and further modulo generates the same index for more than one key.</li>
+										<li>When we have a collision, then we need to proceed with additional computation with e.g. <b>double hashing</b>.</li>
 									</ol>
 
 									<h5>Key-Value insertion example:</h5>
